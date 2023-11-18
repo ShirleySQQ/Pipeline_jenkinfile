@@ -14,18 +14,18 @@ agent any
 stages {
     stage ('GIT Checkout'){
         steps {
-            git changelog: false, poll: false, url: 'https://github.com/...git'
+            git changelog: false, poll: false, url: 'https://github.com/ShirleySQQ/Pipeline_jenkinfile.git'
         }
     }
 
     stage('build') {
   steps {
-    sh 'pip install -r requirements.txt'
+    sh 'pip3 install -r requirements.txt'
   }
 }
     stage ('Test'){
         steps {
-            sh 'python unit-test.py'
+            sh 'python3 unit-test.py'
         }
     }
 }
